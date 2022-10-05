@@ -1,0 +1,8 @@
+sro.product.board=lahaina
+ro.board.platform=lahaina
+ro.virtual_ab.enabled=true
+ro.crypto.metadata.enabled=true
+ro.crypto.uses_fs_ioc_add_encryption_key=true
+vendor.gatekeeper.disable_spu=true
+ro.crypto.volume.metadata.method=dm-default-key
+ro.crypto.dm_default_key.options_format.version=2

@@ -89,6 +89,7 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # TWRP Configuration
 TW_THEME := portrait_hdpi
+TW_DEVICE_VERSION :=BY SIDDK
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
@@ -99,17 +100,20 @@ TW_INCLUDE_RESETPROP := true
 TW_INCLUDE_REPACKTOOLS := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
+TW_CUSTOM_CPU_TEMP_PATH := "/sys/devices/virtual/thermal/thermal_zone50/temp"
 #TW_Y_OFFSET := 80
 #TW_H_OFFSET := -80
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 TARGET_USES_MKE2FS := true
 TW_NO_SCREEN_BLANK := true
+TW_NO_EXFAT_FUSE := true
 TW_EXCLUDE_APEX := true
+TW_INCLUDE_FASTBOOTD := true
 TW_FRAMERATE := 90
-#TW_LOAD_VENDOR_MODULES := "machine_dlkm.ko mxl5007t.ko rmnet_shs.ko tua9001.ko adsp_loader_dlkm.ko max2165.ko native_dlkm.ko rx_macro_dlkm.ko tuner-simple.ko apr_dlkm.ko mbhc_dlkm.ko pinctrl_lpi_dlkm.ko si2157.ko tuner-types.ko bolero_cdc_dlkm.ko mc44s803.ko pinctrl_wcd_dlkm.ko slimbus-ngd.ko tuner-xc2028.ko bt_fm_slim.ko platform_dlkm.ko slimbus.ko tx_macro_dlkm.ko btpower.ko q6_dlkm.ko snd_event_dlkm.ko va_macro_dlkm.ko e4000.ko q6_notifier_dlkm.ko stub_dlkm.ko wcd937x_dlkm.ko fc0011.ko q6_pdr_dlkm.ko swr_ctrl_dlkm.ko wcd937x_slave_dlkm.ko fc0012.ko qcom_edac.ko swr_dlkm.ko wcd938x_dlkm.ko fc0013.ko msi001.ko qm1d1b0004.ko swr_dmic_dlkm.ko wcd938x_slave_dlkm.ko fc2580.ko msm_drm.ko qm1d1c0042.ko swr_haptics_dlkm.ko wcd9xxx_dlkm.ko fts_tp.ko mt2060.ko qt1010.ko tda18212.ko wcd_core_dlkm.ko goodix_fp.ko mt2063.ko r820t.ko tda18218.ko wsa883x_dlkm.ko hdmi_dlkm.ko mt20xx.ko radio-i2c-rtc6226-qca.ko tda18250.ko wsa_macro_dlkm.ko hid-aksys.ko mt2131.ko rdbg.ko tda9887.ko xc4000.ko it913x.ko mt2266.ko rmnet_core.ko tea5761.ko xc5000.ko llcc_perfmon.ko mxl301rf.ko rmnet_ctl.ko tea5767.ko m88rs6000t.ko mxl5005s.ko rmnet_offload.ko tfa98xx_dlkm.ko"
 TW_OVERRIDE_SYSTEM_PROPS := \
     "ro.build.date.utc;ro.build.product;ro.build.fingerprint=ro.system.build.fingerprint;ro.build.version.incremental;ro.product.device=ro.product.system.device;ro.product.model=ro.product.system.model;ro.product.name=ro.product.system.name"
+TW_LOAD_VENDOR_MODULES := " msm_drm.ko _qcom_scm.ko clk-dummy.ko clk-qcom.ko clk-rpmh.ko cmd-db.ko cqhci-crypto-qti.ko cqhci-crypto.ko cqhci.ko crypto-qti-common.ko crypto-qti-hwkm.ko gcc-lahaina.ko gcc-shima.ko gcc-yupik.ko hwkm.ko icc-bcm-voter.ko icc-rpmh.ko iommu-logger.ko memory_dump_v2.ko msm-poweroff.ko nothing_bootloader_log.ko phy-qcom-ufs-qmp-v4-lahaina.ko phy-qcom-ufs-qmp-v4-yupik.ko phy-qcom-ufs-qrbtc-sdm845.ko phy-qcom-ufs.ko pinctrl-lahaina.ko pinctrl-msm.ko pinctrl-shima.ko pinctrl-yupik.ko proxy-consumer.ko qbt_handler.ko qcom-arm-smmu-mod.ko qcom-pdc.ko qcom_rpmh.ko qnoc-lahaina.ko qnoc-qos.ko qnoc-shima.ko qnoc-yupik.ko qpnp-power-on.ko refgen.ko rpmh-regulator.ko rpmhpd.ko sdhci-msm.ko secure_buffer.ko stub-regulator.ko ufs-qcom.ko ufshcd-crypto-qti.ko"
 
 # Crypto
 TW_INCLUDE_CRYPTO := true
